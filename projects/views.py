@@ -6,3 +6,7 @@ from .models import Projects
 class ProjectsHomePageView(ListView):
     template_name = 'projects_home.html'
     model = Projects
+
+class ProjectsInsertView(ListView):
+    template_name = 'projects_insert.html'  
+    model = Projects  
