@@ -1,4 +1,5 @@
-from django.views.generic import ListView
+from django.views.generic import DetailView
+from django.views.generic.edit import CreateView
 from .models import Projects
 
 
@@ -7,6 +8,7 @@ class ProjectsHomePageView(ListView):
     template_name = 'projects_home.html'
     model = Projects
 
-class ProjectsInsertView(ListView):
+class ProjectsInsertView(DetailView):
     template_name = 'projects_insert.html'  
     model = Projects  
+    fields =['ID','company_name','sales_rep','project_name','needed_skill','other_skill','company_address','period','job_detail','needed_member']
